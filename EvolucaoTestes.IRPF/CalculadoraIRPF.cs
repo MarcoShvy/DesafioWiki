@@ -11,4 +11,14 @@ public class CalculadoraIRPF
 
         return salario * 0.275m - 869.36m;
     }
+
+    public decimal CalcularINSS(decimal salario)
+    {
+        if (salario <= 1518.00m) return salario * 0.075m;
+        if (salario <= 2793.88m) return salario * 0.09m;
+        if (salario <= 4190.83m) return salario * 0.12m;
+        if (salario <= 8157.41m) return salario * 0.14m;
+
+        return 828.39m;
+    }
 }

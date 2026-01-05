@@ -41,7 +41,7 @@ public class ProcessadorIRPFTests
             Times.Once);
 
         mockConsole.Verify(c =>
-            c.WriteLine(It.Is<string>(s => s.Contains("4.494,36"))),
+            c.WriteLine(It.Is<string>(s => s.Contains("3.794,36"))),
             Times.Once);
     }
 }
