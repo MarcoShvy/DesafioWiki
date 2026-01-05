@@ -2,7 +2,7 @@ namespace EvolucaoTestes.IRPF;
 
 public class Calculadora
 {
-    public decimal CalcularDesconto(decimal salario)
+    public decimal CalcularDescontoIRPF(decimal salario)
     {
         if (salario <= 1903.99m) return 0m;
         if (salario <= 2826.65m) return salario * 0.075m - 142.80m;

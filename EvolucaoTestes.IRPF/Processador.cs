@@ -45,7 +45,7 @@ public class Processador
         string nome = ObterNome();
         decimal salario = ObterSalario();
 
-        decimal desconto = _calculadora.CalcularDesconto(salario) + _calculadora.CalcularINSS(salario);
+        decimal desconto = _calculadora.CalcularDescontoIRPF(salario) + _calculadora.CalcularINSS(salario);
         decimal salarioLiquido = salario - desconto;
 
         _console.WriteLine($"Nome do Contribuinte: {nome}");
