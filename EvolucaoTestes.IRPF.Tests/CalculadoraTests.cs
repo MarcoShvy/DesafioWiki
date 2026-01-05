@@ -2,9 +2,9 @@ using Xunit;
 
 namespace EvolucaoTestes.IRPF.Tests;
 
-public class CalculadoraIRPFTests
+public class CalculadoraTests
 {
-    private readonly CalculadoraIRPF _calculadora = new();
+    private readonly Calculadora _calculadora = new();
 
     [Theory]
     [InlineData(1000, 0)]
