@@ -5,14 +5,14 @@ using System.Collections.Generic;
 
 namespace EvolucaoTestes.IRPF.Tests;
 
-public class ProcessadorIRPFTests
+public class ProcessadorTests
 {
     [Fact]
     public void Executar_ComUmContribuinte_DeveExibirResultado()
     {
 
         var mockConsole = new Mock<IConsole>();
-        var calculadora = new CalculadoraIRPF();
+        var calculadora = new Calculadora();
         var validador = new Validador();
 
         var entradas = new Queue<string>(new[]
@@ -26,7 +26,7 @@ public class ProcessadorIRPFTests
             .Setup(c => c.ReadLine())
             .Returns(() => entradas.Dequeue());
 
-        var processador = new ProcessadorIRPF(
+        var processador = new Processador(
             calculadora,
             validador,
             mockConsole.Object
@@ -41,7 +41,7 @@ public class ProcessadorIRPFTests
             Times.Once);
 
         mockConsole.Verify(c =>
-            c.WriteLine(It.Is<string>(s => s.Contains("4.494,36"))),
+            c.WriteLine(It.Is<string>(s => s.Contains("3.794,36"))),
             Times.Once);
     }
 }

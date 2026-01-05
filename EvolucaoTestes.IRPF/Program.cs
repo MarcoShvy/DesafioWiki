@@ -4,8 +4,8 @@ class Program
 {
     static void Main()
     {
-        var processador = new ProcessadorIRPF(
-            new CalculadoraIRPF(),
+        var processador = new Processador(
+            new Calculadora(),
             new Validador(),
             new SystemConsole()
         );
