@@ -1,13 +1,13 @@
 namespace EvolucaoTestes.IRPF;
 
-public class ProcessadorIRPF
+public class Processador
 {
-    private readonly CalculadoraIRPF _calculadora;
+    private readonly Calculadora _calculadora;
     private readonly Validador _validador;
     private readonly IConsole _console;
 
-    public ProcessadorIRPF(
-        CalculadoraIRPF calculadora,
+    public Processador(
+        Calculadora calculadora,
         Validador validador,
         IConsole console)
     {

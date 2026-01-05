@@ -1,6 +1,6 @@
 namespace EvolucaoTestes.IRPF;
 
-public class CalculadoraIRPF
+public class Calculadora
 {
     public decimal CalcularDesconto(decimal salario)
     {
